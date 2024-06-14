@@ -1,0 +1,29 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+  datasource:
+    username: root
+    password: Sampathkatkam
+    url: jdbc:mysql://localhost:3306/project03
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+# Application messages goes here
+auth-service:
+ messages: 
+  userReg: User Created
+  userRegErr: User Creation Failed
+  login: Login Success
+  loginErr: Invalid Credentials 
